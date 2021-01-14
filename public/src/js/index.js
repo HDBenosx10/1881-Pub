@@ -41,7 +41,7 @@ const fakeAuth = (login , password) => {
 
     admLogin === login &&
     admPassword === password ?
-    console.log(document.location.href = '/home.html') :
+    console.log(document.location.pathname = '/public/src/views/home.html') :
 
     acessDenied()
 
