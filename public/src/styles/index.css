@@ -1,0 +1,339 @@
+@import url('https://fonts.googleapis.com/css2?family=Russo+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bangers&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&display=swap');
+
+:root{
+    --bg-color :#F5B301;
+    --input-color : #E4F1E4;
+    --secondary-color : #2A2E34;
+    --text-details-color : #3B3F46;
+    --text-details-color-dark : #1E2328;
+    --text-button-color : #FDFDFD;
+    --checkbox-bg-0 : #ebeceb;
+    --selected-color : #2c2c2a;
+    --image-bg : url(/public/img/CHEDDAR\ 12.jpg);
+    --image-bg-tablet : url(/public/img/CHEDDAR\ 1.jpg)
+}
+
+@keyframes shake-horizontal {
+    0%,
+    100% {
+      transform: translateX(0);
+    }
+    10%,
+    30%,
+    50%,
+    70% {
+      transform: translateX(-10px);
+    }
+    20%,
+    40%,
+    60% {
+      transform: translateX(10px);
+    }
+    80% {
+      transform: translateX(8px);
+    }
+    90% {
+      transform: translateX(-8px);
+    }
+  }
+  
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    
+}
+
+html, body {
+    width: 100vw;
+    height: 100vh;
+}
+
+.container {
+    height: 100%;
+    background-color: var(--bg-color);
+    display: grid;
+    grid-template-columns: 1fr 600px;
+    
+}
+.bg {
+    background-image: var(--image-bg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+
+.login {
+    background-color: var(--bg-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px;
+    
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+}
+
+
+.formulario {
+    padding: 50px 0;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.formulario p {
+    font-family: 'Bangers',cursive;
+    font-weight: bold;
+    font-size: 4rem;
+    letter-spacing: 1px;
+}
+
+.data {
+    margin-top: 2rem;
+    width: 450px;
+    height:80px;
+    border-radius: 20px;
+    outline: 0;
+    border: 0;
+    background: var(--input-color);
+    border: 1px solid var(--text-details-color);
+    font-size: 1.3rem;
+    padding: 40px;
+    font-family: 'Open Sans';
+    
+}
+
+.data:placeholder-shown {
+    font-family: 'Bangers';
+    letter-spacing: 1px;
+}
+
+.data:focus {
+    border-bottom: 3px solid var(--selected-color);
+}
+
+.denied {
+    border-bottom: 3px solid red;
+}
+
+.shake-horizontal {
+	animation: shake-horizontal 0.8s cubic-bezier(0.455, 0.030, 0.515, 0.955) both;
+}
+
+.chekbox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-self: flex-start;
+    padding: 15px 35px;
+    font-family: 'Orbitron';
+    color: var(--text-details-color);
+}
+.chekbox input {
+    display: none;
+}
+
+.chekbox label {
+    padding: .4rem;
+}
+
+.chekbox label::before {
+    display:inline-block ;
+    content: "";
+    background-color: var(--checkbox-bg-0);
+    width: 20px;
+    height: 20px;
+    vertical-align: bottom;
+    margin-right: 5px;
+    border: 1px solid var(--text-details-color);
+}
+
+.chekbox input[type ='checkbox']:checked + label::before {
+    display:inline-block ;
+    text-align: center;
+    content: "\2713";
+    background-color: var(--secondary-color);
+    color: var(--input-color);
+    font-weight: 900;
+    width: 20px;
+    height: 20px;
+    vertical-align: bottom;
+    margin-right: 5px;
+}
+
+.chekbox label:hover {
+    color: var(--text-details-color-dark);
+    cursor: pointer;
+}
+
+.formulario button {
+    margin-top: 1rem;
+    width: 220px;
+    height: 75px;
+    border-radius: 20px;
+    background: var(--secondary-color);
+    border: 0;
+    outline: 0;
+    color: var(--text-button-color);
+    font-family: 'Orbitron';
+    font-size: 1.6rem;
+    font-weight: 700;
+    box-shadow: 2px 2px 4px rgb(43, 42, 42);
+}
+
+.formulario button:focus {
+    box-shadow: 0 0 0 ;
+    transform: translate(2px , 2px);
+}
+
+.formulario button:hover {
+    background: var(--text-details-color-dark);
+    cursor: pointer;
+}
+
+.formulario a {
+    text-decoration: none;
+    font-family: 'Orbitron';
+    color: var(--text-details-color);
+    font-size: 1.3rem;
+    margin-top: 2.5rem;
+}
+
+.formulario a:hover {
+    color: var(--text-details-color-dark);
+}
+
+footer {
+    align-self: flex-end;
+
+}
+
+footer p {
+    font-family: 'Orbitron';
+    font-weight: 700;
+    font-size: 1.1rem;
+}
+
+footer span {
+    font-size: 20px;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+.alert {
+    position: absolute;
+    align-self: center;
+    margin: 32px auto;
+    width: 550px;
+    height: 100px;
+    background: var(--text-details-color);
+    box-shadow: 0px 0px 10px var(--text-details-color-dark);
+    border:1px solid var(--text-details-color-dark);
+    display: none;
+    
+}
+
+.alert p {
+    font-size: 3rem;
+    text-align: center;
+    padding-top: 1.3rem;
+    color: var(--input-color);
+    font-family: 'Bangers';
+    letter-spacing: 1px;
+}
+
+.progress-bar {
+    position: absolute;
+    bottom: 1px;
+    width: 100%;
+    height: 4px;
+    background: var(--bg-color);
+    transition: width 100ms;
+    
+}
+
+@media(max-width:1440px) and (min-width:610px){
+    .bg {display: none;}
+    body {
+        background-image: var(--image-bg-tablet);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: -80px;
+        
+    }
+    .container {
+        display: flex;
+        justify-content: center;
+        background: none;
+        height: unset;
+        
+    }
+
+    .login { 
+        margin: 2rem;
+        border-radius: 1.4rem;
+    }
+    .alert {
+        width: 450px;
+        margin: 40px;
+    }
+
+
+}
+
+@media(max-width:600px) {
+    .bg {
+        display: none;
+    }
+    .container {
+        display: flex;
+        flex-direction: column;
+    }
+    .login {
+        width: 100%;
+    }
+    .data {
+        width: 100%;
+        padding: 35px;
+    }
+    .alert {
+        width: 90vw;
+        height: 90px;
+    }
+    .alert p {
+        font-size: 2rem;
+    }
+
+}
+
+@media(max-width:430px) {
+    .formulario p {
+        font-size: 2rem;
+    }
+}
+
+@media(max-height:930px) and (min-width:610px) {
+    .container{
+        background-image: var(--image-bg-tablet);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: -80px;
+    }
+
+}
