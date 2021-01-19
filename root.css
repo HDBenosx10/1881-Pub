@@ -12,8 +12,8 @@
     --text-button-color : #FDFDFD;
     --checkbox-bg-0 : #ebeceb;
     --selected-color : #2c2c2a;
-    --image-bg : url(/public/img/CHEDDAR\ 12.jpg);
-    --image-bg-tablet : url(/public/img/CHEDDAR\ 1.jpg)
+    --image-bg : url(img/CHEDDAR\ 12.jpg);
+    --image-bg-tablet : url(img/CHEDDAR\ 1.jpg)
 }
 
 @keyframes shake-horizontal {
